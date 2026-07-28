@@ -57,8 +57,6 @@ export const houseRegulars: Cookie[] = [
 export const siteInfo = {
   instagramHandle: 'appleleafbakery',
   instagramUrl: 'https://www.instagram.com/appleleafbakery',
-  // TODO: paste the full order form URL from your Instagram bio here —
-  // it was truncated in the screenshot this site was built from.
   orderFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSeo2SjQNXhy3aYu2vzGXAqPFwu6ks2invsv2DbEEQlQ41RWAA/closedform',
   pickupAddress: '67 Sherbrook Street, Winnipeg',
   // TODO: fill in the real pickup cadence (bio text was cut off after "every…")
