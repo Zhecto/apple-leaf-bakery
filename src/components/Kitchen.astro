@@ -1,0 +1,22 @@
+---
+import { siteInfo } from '../data/menu';
+---
+
+<div id="kitchen" class="kitchen-bg py-[70px] text-center">
+  <div class="wrap max-w-[640px] mx-auto">
+    <span class="label text-butter">Behind the Counter</span>
+    <h2 class="text-[clamp(26px,3.4vw,34px)] text-paper mt-3">
+      Small kitchen, big batches of trying new things.
+    </h2>
+    <p class="text-paper/90 text-[17px] mt-3.5">
+      Every flavour starts as a test batch shared with friends before it
+      makes the cut. If you've got an idea for next month, we're always
+      listening.
+    </p>
+    <div class="mt-[26px]">
+      <a class="btn btn-primary" href={siteInfo.instagramUrl} target="_blank" rel="noopener">
+        Follow along @{siteInfo.instagramHandle}
+      </a>
+    </div>
+  </div>
+</div>

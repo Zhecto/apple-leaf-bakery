@@ -1,0 +1,20 @@
+---
+import { houseRegulars } from '../data/menu';
+import CookieCard from './CookieCard.astro';
+---
+
+<section id="menu" class="py-16">
+  <div class="wrap">
+    <div class="max-w-[620px] mb-10">
+      <span class="label block mb-2.5">House Regulars</span>
+      <h2 class="text-[clamp(28px,3.6vw,38px)]">The everyday lineup.</h2>
+      <p class="mt-3 text-ink-soft">
+        The cookies that show up in the box no matter the month — alongside
+        whatever's featured.
+      </p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[22px]">
+      {houseRegulars.map((cookie, i) => <CookieCard cookie={cookie} index={i} />)}
+    </div>
+  </div>
+</section>

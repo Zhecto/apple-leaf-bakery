@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-cream text-ink font-body text-[17px] leading-relaxed antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display text-apple-deep m-0;
+  }
+  a {
+    @apply text-inherit;
+  }
+  a:focus-visible,
+  button:focus-visible {
+    @apply outline outline-2 outline-leaf-deep outline-offset-[3px] rounded;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@layer components {
+  /* Small reusable text/layout patterns used across sections */
+  .label {
+    @apply font-mono text-xs tracking-[0.14em] uppercase text-leaf-deep font-semibold;
+  }
+  .wrap {
+    @apply max-w-[1080px] mx-auto px-7;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center gap-2 no-underline font-bold text-[15px] px-6 py-3.5 rounded-lg cursor-pointer border-none font-body transition;
+  }
+  .btn-primary {
+    @apply bg-apple text-paper shadow-[3px_3px_0_theme(colors.apple.deep)] hover:translate-x-px hover:translate-y-px hover:shadow-[2px_2px_0_theme(colors.apple.deep)];
+  }
+  .btn-ghost {
+    @apply bg-transparent text-leaf-deep border-[1.5px] border-leaf-deep hover:bg-leaf-deep hover:text-paper;
+  }
+
+  /*
+   * Signature gingham weave — pulled from the brand's story-highlight
+   * covers. Two overlapping striped gradients + multiply blend mode
+   * create the woven-fabric look. This isn't expressible as plain
+   * utility classes, so it lives here once and gets reused via className.
+   */
+  .gingham {
+    background-color: theme('colors.paper');
+    background-image: repeating-linear-gradient(
+        0deg,
+        theme('colors.gingham') 0 6px,
+        transparent 6px 32px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        theme('colors.gingham') 0 6px,
+        transparent 6px 32px
+      );
+    background-blend-mode: multiply;
+    background-size: 32px 32px;
+  }
+
+  .ribbon-divider {
+    @apply h-[22px] border-y border-dashed border-ink/25 opacity-[0.85];
+    background-color: theme('colors.paper');
+    background-image: repeating-linear-gradient(
+        0deg,
+        theme('colors.gingham') 0 3px,
+        transparent 3px 16px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        theme('colors.gingham') 0 3px,
+        transparent 3px 16px
+      );
+    background-blend-mode: multiply;
+  }
+
+  /* Darker gingham wash used behind the Kitchen section */
+  .kitchen-bg {
+    background-color: theme('colors.leaf.deep');
+    background-image: repeating-linear-gradient(
+        0deg,
+        theme('colors.gingham') 0 6px,
+        transparent 6px 32px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        theme('colors.gingham') 0 6px,
+        transparent 6px 32px
+      );
+    background-size: 32px 32px;
+    background-blend-mode: soft-light;
+  }
+}

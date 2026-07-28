@@ -1,0 +1,24 @@
+---
+import type { Cookie } from '../data/menu';
+
+interface Props {
+  cookie: Cookie;
+  index: number;
+}
+
+const { cookie, index } = Astro.props;
+const num = String(index + 1).padStart(2, '0');
+---
+
+<div class="bg-paper rounded-xl p-[22px] border border-ink/10 transition hover:-translate-y-1 hover:shadow-card-sm">
+  <span class="font-mono text-xs text-gingham font-semibold">{num}</span>
+  <h3 class="text-[21px] mt-2.5 mb-2 text-ink">{cookie.name}</h3>
+  <p class="text-[14.5px] text-ink-softer mb-3.5">{cookie.description}</p>
+  <div class="flex gap-2 flex-wrap">
+    {cookie.tags.map((tag) => (
+      <span class="font-mono text-[10.5px] font-semibold tracking-wide uppercase px-2.5 py-1 rounded-full bg-cream-deep text-leaf-deep">
+        {tag}
+      </span>
+    ))}
+  </div>
+</div>

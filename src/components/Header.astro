@@ -1,0 +1,36 @@
+---
+import { siteInfo } from '../data/menu';
+---
+
+<header class="sticky top-0 z-50 bg-cream/90 backdrop-blur-md border-b border-ink/10">
+  <div class="wrap flex items-center justify-between py-3.5">
+    <a class="flex items-center gap-2.5 no-underline" href="#top">
+      <svg class="w-[34px] h-[34px]" viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="26" r="16" fill="#B23A2E"></circle>
+        <path
+          d="M24 18c-1.5-3-5-4-5-4s0 3.5 2.5 5.2C22.4 19.7 23.2 18.9 24 18z"
+          fill="#4B6B4A"></path>
+        <path d="M17 32c0-6 3.5-11 7-11s7 5 7 11-3 8-7 8-7-2-7-8z" fill="#F6EAD6"
+        ></path>
+      </svg>
+      <span class="leading-tight">
+        <div class="font-display font-bold text-[19px] text-apple-deep">Apple Leaf</div>
+        <div class="font-mono text-[9.5px] tracking-[0.22em] text-leaf-deep">BAKERY</div>
+      </span>
+    </a>
+    <nav class="hidden md:flex gap-6 text-[14.5px] font-semibold">
+      <a class="no-underline text-ink hover:text-apple-deep py-1" href="#flavour">This Month</a>
+      <a class="no-underline text-ink hover:text-apple-deep py-1" href="#menu">Menu</a>
+      <a class="no-underline text-ink hover:text-apple-deep py-1" href="#visit">Visit</a>
+      <a class="no-underline text-ink hover:text-apple-deep py-1" href="#kitchen">Kitchen</a>
+    </nav>
+    <a
+      class="inline-block text-[13.5px] font-bold bg-apple text-paper no-underline px-4 py-2.5 rounded-full hover:bg-apple-deep transition"
+      href={siteInfo.instagramUrl}
+      target="_blank"
+      rel="noopener"
+    >
+      Instagram
+    </a>
+  </div>
+</header>

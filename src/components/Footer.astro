@@ -1,0 +1,23 @@
+---
+import { siteInfo } from '../data/menu';
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-ink text-paper/75 pt-[42px] pb-7">
+  <div class="wrap">
+    <div class="flex justify-between items-center flex-wrap gap-4">
+      <span class="leading-tight">
+        <div class="font-display font-bold text-[19px] text-paper">Apple Leaf Bakery</div>
+        <div class="font-mono text-[9.5px] tracking-[0.22em] text-paper/50 mt-0.5">WINNIPEG, MB</div>
+      </span>
+      <div class="flex gap-[22px] flex-wrap">
+        <a class="no-underline text-paper/85 font-semibold text-sm hover:text-butter" href={siteInfo.instagramUrl} target="_blank" rel="noopener">Instagram</a>
+        <a class="no-underline text-paper/85 font-semibold text-sm hover:text-butter" href={siteInfo.orderFormUrl} target="_blank" rel="noopener">Order Form</a>
+        <a class="no-underline text-paper/85 font-semibold text-sm hover:text-butter" href="#top">Back to top</a>
+      </div>
+    </div>
+    <div class="mt-7 text-[12.5px] opacity-60 font-mono">
+      © {year} Apple Leaf Bakery. Made with a little flour and a lot of apple leaves. 🍎
+    </div>
+  </div>
+</footer>

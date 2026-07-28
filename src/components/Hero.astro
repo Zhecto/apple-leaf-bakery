@@ -1,0 +1,41 @@
+---
+import { flavourOfTheMonth, siteInfo } from '../data/menu';
+---
+
+<div id="top"></div>
+<section class="pt-[76px] pb-[60px] relative overflow-hidden">
+  <div class="wrap grid grid-cols-1 md:grid-cols-[1.15fr_0.85fr] gap-12 items-center">
+    <div>
+      <div
+        class="inline-flex items-center gap-2 bg-paper border border-dashed border-gingham px-3.5 py-1.5 rounded-full font-mono text-xs font-semibold text-apple-deep mb-5"
+      >
+        <span class="w-[7px] h-[7px] rounded-full bg-apple animate-pulse"></span>
+        Orders currently paused — next drop TBA
+      </div>
+      <h1 class="text-[clamp(38px,5.4vw,60px)] font-bold leading-[1.05] tracking-tight">
+        Winnipeg's home for <em class="italic text-leaf-deep font-medium">specialty</em> cookies.
+      </h1>
+      <p class="mt-[18px] text-[19px] max-w-[46ch] text-ink-soft">
+        An apple leaf a day keeps your stress at bay. Small batches, one new
+        flavour every month, baked out of a little kitchen on Sherbrook
+        Street.
+      </p>
+      <div class="mt-[30px] flex gap-3.5 flex-wrap">
+        <a class="btn btn-primary" href={siteInfo.orderFormUrl} target="_blank" rel="noopener">
+          Join the next drop list →
+        </a>
+        <a class="btn btn-ghost" href="#menu">See the menu</a>
+      </div>
+    </div>
+    <div
+      class="relative bg-paper rounded-2xl p-6 shadow-card border border-ink/10 before:content-[''] before:absolute before:-top-2.5 before:left-7 before:w-5 before:h-5 before:bg-paper before:border-l before:border-t before:border-ink/10 before:rotate-45"
+    >
+      <span class="label block mb-2.5">Flavour of the Month</span>
+      <h3 class="text-2xl mb-2">{flavourOfTheMonth.name}</h3>
+      <p class="text-[15px] text-ink-soft mb-3.5">{flavourOfTheMonth.description}</p>
+      <div class="flex gap-4 text-[13px] font-semibold text-leaf-deep">
+        {flavourOfTheMonth.meta.map((m) => <span>{m}</span>)}
+      </div>
+    </div>
+  </div>
+</section>
