@@ -29,24 +29,6 @@ apple-leaf-bakery/
 └── package.json
 ```
 
-## Editing content
-
-You almost never need to touch a component to update the site day-to-day.
-
-- **Change flavours, the monthly special, pickup info, or links** → edit
-  `src/data/menu.ts`. Every page reads from this file.
-- **Change colors or fonts** → edit `tailwind.config.mjs` under
-  `theme.extend`. Colors are named (`apple`, `leaf`, `gingham`, `butter`,
-  etc.) and used as Tailwind classes throughout, e.g. `bg-apple`,
-  `text-leaf-deep`.
-- **Change layout/sections** → edit the relevant file in `src/components/`,
-  using Tailwind utility classes directly on elements (no separate CSS
-  files to hunt through).
-- A few brand-specific textures (the gingham weave, the ribbon divider)
-  aren't plain utility classes — they're defined once in
-  `src/styles/global.css` under `@layer components` and reused via
-  `class="gingham"` / `class="ribbon-divider"`.
-
 ## Local development
 
 Requires [Node.js](https://nodejs.org) 18+.
